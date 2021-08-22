@@ -19,10 +19,10 @@ export default defineConfig({
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {
     // default zh-CN
-    default: 'zh-CN',
+    default: 'ja-JP',
     antd: true,
     // default true, when it is true, will use `navigator.language` overwrite default
-    baseNavigator: true,
+    baseNavigator: false,
   },
   dynamicImport: {
     loading: '@ant-design/pro-layout/es/PageLoading',
@@ -62,6 +62,12 @@ export default defineConfig({
           component: '404',
         },
       ],
+    },
+    {
+      path: '/cloud-analytics/dashboard',
+      name: 'Cloud Analytics',
+      icon: 'dashboard',
+      component: './cloud-analytics/dashboard',
     },
     {
       path: '/dashboard',
